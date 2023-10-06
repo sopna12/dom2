@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    <button onclick="makeRed()">Red</button>
+    <button id="gray">Gray</button>
+    <button id="black">Black</button>
+    <button id="orange">Orange</button>
+
+    
+
+    <script>
+        function makeRed (){
+            document.body.style.backgroundColor= 'red';
+
+        }
+        // by id 
+        const graybutton = document.getElementById('gray')
+        graybutton.onclick = function makegray(){
+            document.body.style.backgroundColor = 'gray'
+        }
+        // by id differ way 
+        const blackbutton = document.getElementById('black')
+        blackbutton.onclick = makeblack;
+        
+        function makeblack(){
+            document.body.style.backgroundColor = 'black'
+        }
+
+
+        document.getElementById('orange').addEventListener('click',function makeorange(){
+            document.body.style.backgroundColor = 'orange'
+        })
+
+
+    </script>
+</body>
+</html>
